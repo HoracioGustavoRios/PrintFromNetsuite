@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D3D14CD2-752C-4004-AB2C-41E7C1ABB56C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NETSUITE_PRINT</RootNamespace>
+    <AssemblyName>NETSUITE_PRINT</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.1.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmImpresionDirecta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImpresionDirecta.Designer.cs">
+      <DependentUpon>FrmImpresionDirecta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REPORTES\CHEQUES\CH_BAC_BA.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CH_BAC_BA.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTES\CHEQUES\CH_BI_BDAV_BH.cs">
+      <DependentUpon>CH_BI_BDAV_BH.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTES\CHEQUES\CH_CITI_CUS.cs">
+      <DependentUpon>CH_CITI_CUS.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTES\FACTURACION\STYBA_TEMPO\ST_CCF_tempo.cs">
+      <DependentUpon>ST_CCF_tempo.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="REPORTES\FACTURACION\VO_EXP_PAQUETE.cs">
+      <DependentUpon>VO_EXP_PAQUETE.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="REPORTES\FACTURACION\VO_EXP.cs">
+      <DependentUpon>VO_EXP.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="REPORTES\FACTURACION\VO_FAC_PAQUETE.cs">
+      <DependentUpon>VO_FAC_PAQUETE.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="REPORTES\FACTURACION\VO_FAC.cs">
+      <DependentUpon>VO_FAC.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="REPORTES\FACTURACION\VO_CCF_PAQUETE.cs">
+      <DependentUpon>VO_CCF_PAQUETE.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="REPORTES\FACTURACION\VO_CCF.cs">
+      <DependentUpon>VO_CCF.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="REPORTES\FACTURACION\ST_EXP.cs">
+      <DependentUpon>ST_EXP.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="REPORTES\FACTURACION\ST_FAC.cs">
+      <DependentUpon>ST_FAC.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="REPORTES\FACTURACION\ST_CCF.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ST_CCF.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTES\NOTAS_CREDITO\ST_NC.cs">
+      <DependentUpon>ST_NC.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="REPORTES\NOTAS_CREDITO\VO_NC_PAQUETE.cs">
+      <DependentUpon>VO_NC_PAQUETE.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="REPORTES\NOTAS_CREDITO\VO_NC.cs">
+      <DependentUpon>VO_NC.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="REPORTES\PAGO_PROVEEDOR\PP_CITI_CUS.cs">
+      <DependentUpon>PP_CITI_CUS.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="REPORTES\PAGO_PROVEEDOR\PP_BI_BDAV_BH.cs">
+      <DependentUpon>PP_BI_BDAV_BH.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="REPORTES\PAGO_PROVEEDOR\PP_BAC_BA.cs">
+      <DependentUpon>PP_BAC_BA.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Web References\netsuite.webservices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmImpresionDirecta.resx">
+      <DependentUpon>FrmImpresionDirecta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="REPORTES\CHEQUES\CH_BAC_BA.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CH_BAC_BA.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\CHEQUES\CH_BI_BDAV_BH.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CH_BI_BDAV_BH.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\CHEQUES\CH_CITI_CUS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CH_CITI_CUS.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\FACTURACION\STYBA_TEMPO\ST_CCF_tempo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ST_CCF_tempo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\FACTURACION\VO_EXP_PAQUETE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>VO_EXP_PAQUETE.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\FACTURACION\VO_EXP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>VO_EXP.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\FACTURACION\VO_FAC_PAQUETE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>VO_FAC_PAQUETE.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\FACTURACION\VO_FAC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>VO_FAC.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\FACTURACION\VO_CCF_PAQUETE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>VO_CCF_PAQUETE.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\FACTURACION\VO_CCF.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>VO_CCF.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\FACTURACION\ST_EXP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ST_EXP.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\FACTURACION\ST_FAC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ST_FAC.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\FACTURACION\ST_CCF.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ST_CCF.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\NOTAS_CREDITO\ST_NC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ST_NC.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\NOTAS_CREDITO\VO_NC_PAQUETE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>VO_NC_PAQUETE.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\NOTAS_CREDITO\VO_NC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>VO_NC.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\PAGO_PROVEEDOR\PP_CITI_CUS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PP_CITI_CUS.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\PAGO_PROVEEDOR\PP_BI_BDAV_BH.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PP_BI_BDAV_BH.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\PAGO_PROVEEDOR\PP_BAC_BA.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PP_BAC_BA.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Web References\netsuite.webservices\accounting.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\accountingTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\AsyncResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\netsuite.webservices\AsyncStatusResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\netsuite.webservices\bank.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\bankTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\commonTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\communication.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\communicationTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\core.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\coreTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\customers.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\customerTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\customization.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\customizationTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\demandPlanning.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\demandPlanningTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\employees.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\employees0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\employeeTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\employeeTypes0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\faults.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\faultTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\fileCabinet.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\fileCabinetTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\financial.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\financialTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\general.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\GetAllResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\netsuite.webservices\GetBudgetExchangeRateResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\netsuite.webservices\GetCurrencyRateResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\netsuite.webservices\GetCustomizationIdResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\netsuite.webservices\GetDataCenterUrlsResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\netsuite.webservices\GetDeletedResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\netsuite.webservices\GetItemAvailabilityResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\netsuite.webservices\GetPostingTransactionSummaryResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\netsuite.webservices\GetSavedSearchResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\netsuite.webservices\GetSelectValueResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\netsuite.webservices\GetServerTimeResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\netsuite.webservices\inventory.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\inventoryTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\marketing.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\marketingTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\messages.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\netsuite.wsdl" />
+    <None Include="Web References\netsuite.webservices\purchases.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\purchaseTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\ReadResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\netsuite.webservices\ReadResponseList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\netsuite.webservices\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\netsuite.webservices\relationships.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\relationshipTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\sales.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\saleTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\scheduling.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\schedulingTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\SearchResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\netsuite.webservices\SessionResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\netsuite.webservices\supplyChain.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\supplyChainTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\support.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\supportTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\website.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\websiteTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\netsuite.webservices\WriteResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\netsuite.webservices\WriteResponseList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://webservices.netsuite.com/wsdl/v2018_2_0/netsuite.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\netsuite.webservices\</RelPath>
+      <UpdateFromURL>https://webservices.netsuite.com/wsdl/v2018_2_0/netsuite.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NETSUITE_PRINT_netsuite_webservices_NetSuiteService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
